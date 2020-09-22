@@ -1,0 +1,151 @@
+
+<!--Javascript calculator to perform
+SUM, MUL, DIV, ADD
+-->
+<!DOCTYPE html>
+<html>
+<head><title>Lab Pgm 1</title>
+    <style>
+      table
+{
+  position: absolute;
+  top: 100px;
+  left: 500px;
+  width:300px;
+  height: 300px
+}
+.button.gray
+{
+  color: white;
+  background-color: #6f6f6f;
+  border-bottom:black 2px solid;
+    border-top: 2px #6f6f6f solid;
+}
+         .title{
+             
+             margin-bottom: 30px;
+             text-align: center;
+             width: 400px;
+             color: blue;
+            position: absolute;
+            left: 450px;
+            
+              height: 50px;
+              font-size: 30px;
+              background:-webkit-linear-gradient(#5433ff,#20bdff,#a5fecb);
+              -webkit-background-clip:text;
+               -webkit-text-fill-color:transparent;
+         }
+         input[type="text"]{
+             border-radius: 5px;
+             text-align: right;
+             background-color: white;
+             width: 95%;
+
+             padding: 4px;
+             padding-top: 3px;
+         }
+        input[type="button"]{
+            background: lightgray;
+            width: 70%;
+            font-size: 25px;
+            font-weight:900;
+            border-radius: 7px;
+            margin-left: 13px;
+            margin-top: 10px;
+
+            background:-webkit-linear-gradient(#5433ff,#20bdff,#a5fecb);
+              -webkit-background-clip:text;
+               -webkit-text-fill-color:transparent;
+
+        }
+    </style>
+    <script>
+          function disp(val){
+              document.getElementById('sdm').value+=val;
+
+          }
+          function clr(){
+              document.getElementById('sdm').value=" ";
+          }
+
+          function solve(){
+             let x= document.getElementById('sdm').value;
+             let y=eval(x);
+             document.getElementById("sdm").value=y
+          }
+    </script>
+</head>
+<body>
+    <div class="title">SHARVARI-4SU17CS087</div>
+<!--Ceate a table-->
+ <table border="2">
+    <tr>
+        <td>
+            <input type="button" class="button gray" value="CE" onclick="clr()">
+        </td>
+        <td colspan="3">
+            <input type="text" id="sdm">
+        </td>
+    </tr>
+    <!-- creating buttons and assign values to it-->
+    <tr>
+        <td>
+            <input type="button" class="button gray" value="+" onclick="disp('+')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="1" onclick="disp('1')" >
+        </td>
+        <td>
+            <input type="button" class="button gray" value="2" onclick="disp('2')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="3" onclick="disp('3')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" class="button gray" value="-" onclick="disp('-')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="4" onclick="disp('4')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="5" onclick="disp('5')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="6" onclick="disp('6')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" class="button gray" value="*" onclick="disp('*')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="7" onclick="disp('7')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="8"onclick="disp('8')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="9" onclick="disp('9')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" class="button gray" value="/" onclick="disp('/')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="." onclick="disp('.')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="0" onclick="disp('0')">
+        </td>
+        <td>
+            <input type="button" class="button gray" value="=" onclick="solve()"  >
+        </td>
+    </tr>
+ </table>
+
+</body>
+</html>
